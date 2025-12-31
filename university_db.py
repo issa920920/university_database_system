@@ -48,6 +48,20 @@ def insert_student(conn, student_name,PASSW):
         return None
 
 
+def insert_enroll(conn,SID,CID): 
+    sql = "INSERT INTO enroll (SID,CID) VALUES (?,?)"
+    try:
+         cursor = conn.cursor() 
+         cursor.execute(sql,(SID,CID))
+         conn.commit()
+         new_enroll = cursor.lastrowid 
+         print(f"enrolled successfully with CID = {new_enroll}")
+         return new_enroll 
+    except Error as e:
+         print(f"error enrolling:{e}")
+         return None
+
+
 def insert_course(conn, course_name,credits):
     
     cur =conn.cursor()
@@ -296,3 +310,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
