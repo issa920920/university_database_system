@@ -26,7 +26,7 @@ Setup:
 
 1. Clone the repository
 
-git clone https://github.com/yourusername/university_database_system.git
+git clone https://github.com/issa920920/university_database_system.git
 cd university_database_system
 
 2.Download the new_sql.db file from this repo and make sure it’s in the same folder as university_db.py
